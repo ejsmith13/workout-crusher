@@ -1,0 +1,56 @@
+body{
+    background-image: url("https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8d29ya291dHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80") ;
+    background-attachment: fixed;
+}
+#card1{
+    width: 20rem; 
+    margin: 10% auto; 
+    text-align: center;
+    background-color: teal;
+    color:white;
+    padding: 2rem;
+}
+#card2{
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    background-color: lightblue;
+}
+#card2Img{
+    height: 400px;
+}
+#crushBtn{
+    background-color: rgb(42, 123, 216);
+    color: white;
+}
+
+#nav{
+    background-color: lightcoral;
+    font-size: larger;
+    font-weight: bolder;
+    color: purple;
+}
+#logo{
+    font-size: xx-large;
+}
+#navLinks{
+    text-align: right;
+}
+#newBtn{
+    background-color: rgb(42, 123, 216);
+    color: white;
+}
+#cardHeader{
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+}
+#title{
+    font-weight: bold;
+}
+#updateBtn{
+    background-color: rosybrown;
+    color: white;
+}
+
