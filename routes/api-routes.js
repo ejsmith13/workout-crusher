@@ -58,6 +58,6 @@ module.exports = function(app) {
       exercise_name: req.body.exercise_name,
       description: req.body.description,
       category: req.body.category
-    }).then((dbPost) => res.json(dbPost));
+    }).then(dbPost => res.json(dbPost));
   });
 };
