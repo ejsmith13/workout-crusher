@@ -50,4 +50,14 @@ module.exports = function(app) {
       });
     }
   });
+
+  // POST route for saving a new exercise in the db
+  app.post("/api/posts", (req, res) => {
+    console.log(req.body);
+    db.Exercise.create({
+      title: req.body.title,
+      body: req.body.body,
+      category: req.body.category
+    }).then((dbPost) => res.json(dbPost));
+  });
 };
