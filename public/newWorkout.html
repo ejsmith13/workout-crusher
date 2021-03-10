@@ -1,92 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Crush-N-It Fitness</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="assets/css/main.css"/>
+  <title>Workout - Express</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="newWorkout.css" media="screen" title="no title">
 </head>
-<body>
-  <div class="viewport">
 
+
+<body>
     <div class="container">
       <div class="row">
-
-        <!-- List the workout stuff on the left side -->
-        <div class="col-4">
-          <div class="list-area">
-            <h4>Workouts</h4>
-            <div id="workouts-list"></div>
-
-            <div id="add-workout-area">
-              <div class="form-group form-inline">
-                <label>Add a workout for today</label>
-                <input type="text" class="form-control" name="workout-name" id="workout-name" />
-                <button id="add-workout" class="btn btn-primary btn-small">Add</button>
-              </div>
-            </div>
+        <div class="row">
+          <div class="col-sm-2 mt-4">
+            <a class="btn btn-light" href="/home">Home</a>
           </div>
         </div>
-
-
-        <!-- On the right side, show the activities for the selected day,
-        and allow for a new activity to be entered -->
-        <div class="col-8 right-column">
-          <div class="list-area">
-            <h4>Activities</h4>
-            <div id="activities-list"></div>
-
-            <div id="add-activity-area">
+        <div class="col-md-5 offset-md-3">
+          <form id="cms">
+            <div class="form-group">
+              <label for="exercise_name">Exercise Name:</label>
+              <input type="text" class="form-control" id="exercise_name">
+              <br />
+              <label for="description">Description:</label>
+              <textarea class="form-control" rows="10" id="description"></textarea>
               <div class="form-group">
-                <label>Add an activity</label>
-                <select id="exercise" class="form-control">
-                  <option value="">Choose an exercise</option>
+                <label for="category">Select Category:</label>
+                <select class="custom-select" id="category">
+                  <option value="Cardio">Cardio</option>
+                  <option value="Resistance">Resistance</option>
+                  <option value="Yoga">Yoga</option>
                 </select>
               </div>
-
-              <div class-="form-group">
-                <label>Duration</label>
-                <input class="form-control" type="text" name="duration" id="duration" />
-              </div>
-
-              <div class-="form-group">
-                <label>Weight</label>
-                <input class="form-control" type="text" name="weight" id="weight" />
-              </div>
-
-              <div class-="form-group">
-                <label>Reps</label>
-                <input class="form-control" type="text" name="reps" id="reps" />
-              </div>
-
-              <div class-="form-group">
-                <label>Sets</label>
-                <input class="form-control" type="text" name="sets" id="sets" />
-              </div>
-
-              <div class-="form-group">
-                <label>Distance</label>
-                <input class="form-control" type="text" name="distance" id="distance" />
-              </div>
-
-              <div class-="form-group">
-                <button id="add-activity" class="btn btn-primary btn-small">Add</button>
-              </div>
-
-            </div> <!-- /#add-activity-area-->
-          </div>
-        </div> <!-- /col-xs-8 -->
-
-      </div> <!-- /row-->
-    </div> <!-- /container-->
-  </div>
+              <br />
+              <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Custom Script -->
+    <script src="js/newWorkout.js" type="text/javascript"></script>
   
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="/assets/js/app.js"></script>
-</body>
-</html>
+  </body>
+  
+  </html>
+  
