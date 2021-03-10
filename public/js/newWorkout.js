@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   let updating = false;
 
   // Get elements from the page
-  const bodyInput = document.getElementById("body");
+  const descriptionInput = document.getElementById("description");
   const nameInput = document.getElementById("exercise_name");
   const cmsForm = document.getElementById("cms");
   const postCategorySelect = document.getElementById("category");
@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    if (!nameInput.value || !bodyInput.value) {
+    if (!nameInput.value || !descriptionInput.value) {
       alert("Your post is missing some content");
     }
 
     // Create a newPost object to send off to the backend
     const newPost = {
-      name: nameInput.value.trim(),
-      body: bodyInput.value.trim(),
+      exercise_name: nameInput.value.trim(),
+      description: descriptionInput.value.trim(),
       category: postCategorySelect.value,
     };
     console.log("handleFormSubmit -> newPost", newPost);
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
       updatePost(newPost);
     } else {
       submitPost(newPost);
-      console.log("submitting post");
     }
   };
 

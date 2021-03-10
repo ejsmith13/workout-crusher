@@ -55,8 +55,8 @@ module.exports = function(app) {
   app.post("/api/posts", (req, res) => {
     console.log(req.body);
     db.Exercise.create({
-      title: req.body.title,
-      body: req.body.body,
+      exercise_name: req.body.exercise_name,
+      description: req.body.description,
       category: req.body.category
     }).then((dbPost) => res.json(dbPost));
   });

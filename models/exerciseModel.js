@@ -1,13 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
   const Exercise = sequelize.define("Exercise", {
-    name: {
+    exercise_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    body: {
+    description: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
