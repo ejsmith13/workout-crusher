@@ -13,11 +13,12 @@ const passport = require("./config/passport");
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
 
+// Creating express app and configuring middleware needed for authentication
+const app = express();
+
 // Concise output colored by response status for development use. The :status token will be colored green for success codes, red for server error codes, yellow for client error codes, cyan for redirection codes, and uncolored for information codes.
 app.use(logger("dev"));
 
-// Creating express app and configuring middleware needed for authentication
-const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
