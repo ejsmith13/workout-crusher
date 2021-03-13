@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", e => {
     const postsToAdd = [];
 
     posts.forEach(post => postsToAdd.push(createNewRow(post)));
-    postsToAdd.forEach(post => exerContainer.appendChild(post));
+    postsToAdd.forEach(post => exerContainer.prepend(post));
   };
 
   const createNewRow = post => {
