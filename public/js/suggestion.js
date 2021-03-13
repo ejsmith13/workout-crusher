@@ -32,7 +32,7 @@ const getDaily = () => {
 const displayDaily = data => {
   console.log(`data ${data}`);
   title.innerHTML = `${data.exercise}`;
-  image.setAttribute("alt", `${data.photoURL}`);
+  image.setAttribute("src", `${data.photoURL}`);
   text.innerHTML = `${data.description}`;
 };
 getDaily();

@@ -1,7 +1,22 @@
 const seeds = [
-  { exercise: "walking", description: "walking", photoURL: "test" },
-  { exercise: "running", description: "running", photoURL: "test" },
-  { exercise: "pull ups", description: "pull yourself up", photoURL: "test" }
+  {
+    exercise: "walking",
+    description: "walking",
+    photoURL:
+      "https://media.istockphoto.com/photos/mid-aged-woman-running-in-city-park-picture-id1094475872"
+  },
+  {
+    exercise: "running",
+    description: "running",
+    photoURL:
+      "https://www.sciencemag.org/sites/default/files/styles/article_main_image_-_1280w__no_aspect_/public/1036780592-1280x720.jpg?itok=wNUKvmCd"
+  },
+  {
+    exercise: "pull ups",
+    description: "pull yourself up",
+    photoURL:
+      "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mh0418-fit-pul-01-1558554157.jpg?crop=0.750xw:1.00xh;0.250xw,0&resize=980:*"
+  }
 ];
 module.exports = function(sequelize, DataTypes) {
   const Daily = sequelize.define("Daily", {
