@@ -1,18 +1,20 @@
-// // -- CREATE AN EXERCISE MODEL DEFINITION -- //
-
-// // -- STARTER CODE -- //
-
-// // -- DO WE WANT TO GIVE THEM AN EXAMPLE OR CREATE IT FROM SCRATCH ?? -- //
 module.exports = function(sequelize, DataTypes) {
   const Exercise = sequelize.define("Exercise", {
-    exercise_type: {
+    exercise_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    exercise_name: {
+    description: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    category: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {

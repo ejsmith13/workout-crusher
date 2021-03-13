@@ -59,5 +59,40 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(results => res.json(results));
+
+  // GET route for getting all of the posts
+  app.get("/api/posts/", (req, res) => {
+    db.Exercise.findAll({}).then(dbPost => res.json(dbPost));
+  });
+
+  // POST route for saving a new exercise in the db
+  app.post("/api/posts", (req, res) => {
+    // console.log(req.body);
+    db.Exercise.create({
+      exercise_name: req.body.exercise_name,
+      description: req.body.description,
+      category: req.body.category
+    }).then(dbPost => res.json(dbPost));
+  });
+
+  // Get route for retrieving a single post
+  app.get("/api/posts/:id", (req, res) => {
+    db.Exercise.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(dbPost => res.json(dbPost));
+  });
+
+  // Get route for returning posts of a specific category
+  app.get("/api/posts/category/:category", (req, res) => {
+    console.log("looking at category: ", req.category);
+    db.Exercise.findAll({
+      where: {
+        category: req.params.category
+      }
+    }).then(dbPost => {
+      res.json(dbPost);
+    });
   });
 };

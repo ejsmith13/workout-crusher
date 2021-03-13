@@ -1,0 +1,26 @@
+body{
+    background-image: url("gym.jpg");
+    /* background-attachment: fixed; */
+    color: white;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: lightcoral;
+  color: blue;
+  text-align: center;
+  font-size: larger;
+  font-weight: bolder;
+}
+.navbar {
+  background-color: lightcoral;
+  font-size: larger;
+  font-weight: bolder;
+  color: blue;
+}
+.ready-to-crush {
+    text-align: center;
+    /* align-self: auto; */
+}
