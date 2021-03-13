@@ -1,7 +1,9 @@
-body{
-    background-image: url("gym.jpg");
-    /* background-attachment: fixed; */
-    color: white;
+body {
+  background-image: url("gym.jpeg");
+  background-size: cover;
+
+  /* background-attachment: fixed; */
+  color: white;
 }
 .footer {
   position: fixed;
@@ -21,6 +23,6 @@ body{
   color: blue;
 }
 .ready-to-crush {
-    text-align: center;
-    /* align-self: auto; */
+  text-align: center;
+  /* align-self: auto; */
 }
