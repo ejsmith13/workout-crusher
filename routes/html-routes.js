@@ -8,9 +8,10 @@ module.exports = function(app) {
   app.get("/", (req, res) => {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/home");
+      res.redirect("/members");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    // res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.sendFile(path.join(__dirname, "../public/about.html"));
   });
 
   app.get("/home", (req, res) => {
@@ -37,6 +38,10 @@ module.exports = function(app) {
   // blog route loads blog.html
   app.get("/logWorkout", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/logWorkout.html"));
+  });
+
+  app.get("/cms", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/newWorkout.html"));
   });
 
   // Here we've add our isAuthenticated middleware to this route.
