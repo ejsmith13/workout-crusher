@@ -34,8 +34,8 @@ fetch("/api/exercise", {
     //   }
     // ];
     console.log("Success in getting all exercises:", data);
-    data.forEach(({ date, workout, description, category }, i) => {
-      console.log(date);
+    data.forEach(({ createdAt, exercise_name, description, category }, i) => {
+      console.log(createdAt);
       const entryContainer = document.getElementById("entry");
       const sectionBreak = document.createElement("hr");
 
@@ -50,9 +50,12 @@ fetch("/api/exercise", {
       const descriptionEl = document.createElement("td");
       const categoryEl = document.createElement("td");
 
+      const formattedDate = new Date(`${createdAt}`).toLocaleDateString();
+      // newPostDate.textContent = formattedDate;
+
       //   // Add text to the elements we just created
-      dateEl.textContent = `${date}`;
-      workoutEl.textContent = `${workout}`;
+      dateEl.textContent = formattedDate;
+      workoutEl.textContent = `${exercise_name}`;
       descriptionEl.textContent = `${description}`;
       categoryEl.textContent = `${category}`;
 
