@@ -17,8 +17,8 @@ fetch("/api/exercise", {
     "Content-Type": "application/json"
   }
 })
-  .then((response) => response.json())
-  .then((data) => {
+  .then(response => response.json())
+  .then(data => {
     // data = [
     //   {
     //     date: "12/2/2020",
@@ -64,6 +64,6 @@ fetch("/api/exercise", {
       entrySection.appendChild(sectionBreak);
     });
   })
-  .catch((error) => {
+  .catch(error => {
     console.error("Error:", error);
   });

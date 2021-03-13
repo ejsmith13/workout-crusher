@@ -25,7 +25,7 @@ module.exports = function(app) {
       .then(() => {
         res.redirect(307, "/api/login");
       })
-      .catch((err) => {
+      .catch(err => {
         res.status(401).json(err);
       });
   });
@@ -63,11 +63,11 @@ module.exports = function(app) {
       exercise_name: req.body.exercise_name,
       description: req.body.description,
       category: req.body.category
-    }).then((dbPost) => res.json(dbPost));
+    }).then(dbPost => res.json(dbPost));
   });
 
   app.get("/api/exercise", (req, res) => {
-    db.Exercise.findAll({}).then((results) => res.json(results));
+    db.Exercise.findAll({}).then(results => res.json(results));
   });
 
   // Get route for retrieving a single post
