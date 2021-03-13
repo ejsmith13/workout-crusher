@@ -1,7 +1,7 @@
+const chalk = require("chalk");
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
-const chalk = require("chalk");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -9,7 +9,6 @@ module.exports = function(app) {
   // Otherwise the user will be sent an error
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
     console.log(chalk.bold.bgYellow.red("Called /api/login"));
-
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
@@ -27,11 +26,9 @@ module.exports = function(app) {
     })
       .then(() => {
         res.redirect(307, "/api/login");
-        console.log(chalk.bgGreen.white("called /api/login"));
       })
       .catch((err) => {
         res.status(401).json(err);
-        console.log(chalk.bgRed.red("/api/login errored out"));
       });
   });
 
@@ -74,8 +71,6 @@ module.exports = function(app) {
   // POST route for saving a new exercise in the db
   app.post("/api/posts", (req, res) => {
     // console.log(req.body);
-    console.log(chalk.bold.bgYellow.red("Called /api/posts"));
-
     db.Exercise.create({
       exercise_name: req.body.exercise_name,
       description: req.body.description,
@@ -98,9 +93,8 @@ module.exports = function(app) {
 
   // Get route for returning posts of a specific category
   app.get("/api/posts/category/:category", (req, res) => {
-    console.log("looking at category: ", req.category);
+    // console.log("looking at category: ", req.params.category);
     console.log(chalk.bold.bgYellow.red("looking at category: "));
-
     db.Exercise.findAll({
       where: {
         category: req.params.category,
