@@ -50,4 +50,7 @@ module.exports = function(app) {
       });
     }
   });
+  app.get("/api/daily", (req, res) => {
+    db.Daily.findAll({}).then(results => res.json(results));
+  });
 };

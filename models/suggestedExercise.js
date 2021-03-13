@@ -4,7 +4,7 @@ const seeds = [
   { exercise: "pull ups", description: "pull yourself up", photoURL: "test" }
 ];
 module.exports = function(sequelize, DataTypes) {
-  const sugExercise = sequelize.define("suggested", {
+  const Daily = sequelize.define("Daily", {
     exercise: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -23,6 +23,12 @@ module.exports = function(sequelize, DataTypes) {
       defaulfValue: false
     }
   });
-  seeds.map(seed => sugExercise.create(seed));
-  return sugExercise;
+  Daily.sync();
+  Daily.findAll().then(results => {
+    if (results.length === 0) {
+      seeds.map(seed => Daily.create(seed));
+    }
+  });
+
+  return Daily;
 };
