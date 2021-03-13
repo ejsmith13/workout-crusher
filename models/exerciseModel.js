@@ -1,3 +1,4 @@
+// Sequelized Model used to add and retrieve fields from the database
 module.exports = function(sequelize, DataTypes) {
   const Exercise = sequelize.define("Exercise", {
     exercise_name: {
