@@ -2,6 +2,8 @@
 require("dotenv").config();
 // console.log(process.env);
 
+const logger = require("morgan");
+
 const express = require("express");
 const session = require("express-session");
 // Requiring passport as we've configured it
@@ -10,6 +12,9 @@ const passport = require("./config/passport");
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 const db = require("./models");
+
+// Concise output colored by response status for development use. The :status token will be colored green for success codes, red for server error codes, yellow for client error codes, cyan for redirection codes, and uncolored for information codes.
+app.use(logger("dev"));
 
 // Creating express app and configuring middleware needed for authentication
 const app = express();
