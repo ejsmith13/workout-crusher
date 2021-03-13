@@ -1,16 +1,19 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const chalk = require("chalk");
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
+    console.log(chalk.bold.bgYellow.red("Called /api/login"));
+
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
-      id: req.user.id
+      id: req.user.id,
     });
   });
 
@@ -20,13 +23,15 @@ module.exports = function(app) {
   app.post("/api/signup", (req, res) => {
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
     })
       .then(() => {
         res.redirect(307, "/api/login");
+        console.log(chalk.bgGreen.white("called /api/login"));
       })
-      .catch(err => {
+      .catch((err) => {
         res.status(401).json(err);
+        console.log(chalk.bgRed.red("/api/login errored out"));
       });
   });
 
@@ -46,56 +51,61 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
       });
     }
   });
   app.get("/api/daily", (req, res) => {
-    db.Daily.findAll({}).then(results => res.json(results));
+    db.Daily.findAll({}).then((results) => res.json(results));
+    console.log(chalk.bold.bgYellow.red("Called /api/daily"));
   });
   app.get("/api/daily/:id", (req, res) => {
     db.Daily.findOne({
       where: {
-        id: req.params.id
-      }
-    }).then(results => res.json(results));
+        id: req.params.id,
+      },
+    }).then((results) => res.json(results));
   });
   // GET route for getting all of the posts
   app.get("/api/posts/", (req, res) => {
-    db.Exercise.findAll({}).then(dbPost => res.json(dbPost));
+    db.Exercise.findAll({}).then((dbPost) => res.json(dbPost));
   });
 
   // POST route for saving a new exercise in the db
   app.post("/api/posts", (req, res) => {
     // console.log(req.body);
+    console.log(chalk.bold.bgYellow.red("Called /api/posts"));
+
     db.Exercise.create({
       exercise_name: req.body.exercise_name,
       description: req.body.description,
-      category: req.body.category
-    }).then(dbPost => res.json(dbPost));
+      category: req.body.category,
+    }).then((dbPost) => res.json(dbPost));
   });
 
   app.get("/api/exercise", (req, res) => {
-    db.Exercise.findAll({}).then(results => res.json(results));
+    db.Exercise.findAll({}).then((results) => res.json(results));
   });
 
   // Get route for retrieving a single post
   app.get("/api/posts/:id", (req, res) => {
     db.Exercise.findOne({
       where: {
-        id: req.params.id
-      }
-    }).then(dbPost => res.json(dbPost));
+        id: req.params.id,
+      },
+    }).then((dbPost) => res.json(dbPost));
   });
 
   // Get route for returning posts of a specific category
   app.get("/api/posts/category/:category", (req, res) => {
     console.log("looking at category: ", req.category);
+    console.log(chalk.bold.bgYellow.red("looking at category: "));
+
     db.Exercise.findAll({
       where: {
-        category: req.params.category
-      }
-    }).then(dbPost => {
+        category: req.params.category,
+      },
+    }).then((dbPost) => {
       res.json(dbPost);
     });
   });
