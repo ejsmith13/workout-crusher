@@ -53,4 +53,11 @@ module.exports = function(app) {
   app.get("/api/daily", (req, res) => {
     db.Daily.findAll({}).then(results => res.json(results));
   });
+  app.get("/api/daily/:id", (req, res) => {
+    db.Daily.findOne({
+      where: {
+        id: req.params.id
+      }
+    }).then(results => res.json(results));
+  });
 };
