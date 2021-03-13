@@ -75,6 +75,10 @@ module.exports = function(app) {
     }).then(dbPost => res.json(dbPost));
   });
 
+  app.get("/api/exercise", (req, res) => {
+    db.Exercise.findAll({}).then(results => res.json(results));
+  });
+
   // Get route for retrieving a single post
   app.get("/api/posts/:id", (req, res) => {
     db.Exercise.findOne({
