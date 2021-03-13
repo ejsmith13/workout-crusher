@@ -90,7 +90,7 @@ module.exports = function(app) {
 
   // Get route for returning posts of a specific category
   app.get("/api/posts/category/:category", (req, res) => {
-    console.log("looking at category: ", req.category);
+    // console.log("looking at category: ", req.params.category);
     db.Exercise.findAll({
       where: {
         category: req.params.category

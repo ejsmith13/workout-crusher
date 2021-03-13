@@ -1,6 +1,7 @@
 const title = document.getElementById("title");
 const image = document.getElementById("card2Img");
 const text = document.getElementById("text");
+const crushBtn = document.getElementById("crushBtn");
 const id = Math.floor(Math.random() * 3) + 1;
 
 // eslint-disable-next-line no-unused-vars
@@ -30,5 +31,11 @@ const displayDaily = data => {
   image.setAttribute("src", `${data.photoURL}`);
   text.innerHTML = `${data.description}`;
 };
+
+const crushIt = () => {
+  console.log(" button working");
+};
+
 getDaily();
-test();
+
+crushBtn.addEventListener("click", crushIt);

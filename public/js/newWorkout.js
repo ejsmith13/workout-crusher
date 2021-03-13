@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const postCategorySelect = document.getElementById("category");
 
   // Set default value for the category
-  postCategorySelect.value = "Personal";
+  postCategorySelect.value = "Cardio";
 
   const handleFormSubmit = e => {
     e.preventDefault();
