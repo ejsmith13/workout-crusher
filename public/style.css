@@ -39,6 +39,7 @@ body{
 #newBtn{
     background-color: rgb(42, 123, 216);
     color: white;
+    margin-top: 2%;
 }
 #cardHeader{
     background-color: gray;
