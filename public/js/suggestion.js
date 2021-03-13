@@ -3,11 +3,6 @@ const image = document.getElementById("card2Img");
 const text = document.getElementById("text");
 const id = Math.floor(Math.random() * 3) + 1;
 
-const test = () => {
-  title.innerHTML = "This is a test";
-  image.setAttribute("alt", "test image");
-  text.innerHTML = "this is a test II";
-};
 // eslint-disable-next-line no-unused-vars
 let posts;
 

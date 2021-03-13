@@ -59,7 +59,7 @@ module.exports = function(app) {
         id: req.params.id
       }
     }).then(results => res.json(results));
-
+  });
   // GET route for getting all of the posts
   app.get("/api/posts/", (req, res) => {
     db.Exercise.findAll({}).then(dbPost => res.json(dbPost));
