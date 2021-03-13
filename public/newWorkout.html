@@ -33,7 +33,22 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-md-5 offset-md-3">
+        <div class="col-md-6">
+          <form id="previous">
+            <div class="form-group">
+              <label for="prevCategory">Previous Exercises:</label><br />
+              <select class="custom-select" id="preCategory">
+                <option selected value="">All Categories</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Resistance">Resistance</option>
+                <option value="Yoga">Yoga</option>
+              </select>
+            </div>
+          </form><br />
+          <div class="col-md-6 exercise-container">
+          </div>
+        </div>
+        <div class="col-md-6">
           <form id="cms">
             <div class="form-group">
                 <label for="category">Select Category:</label><br />
@@ -51,7 +66,7 @@
               <label for="description">Description:</label>
               <textarea class="form-control" rows="10" id="description"></textarea>
               <br />
-              <button type="submit" class="btn btn-success submit btn-lg">Submit</button>
+              <button type="submit" class="btn btn-success submit btn-lg">Crush It!</button>
             </div>
           </form>
         </div>
@@ -59,7 +74,7 @@
     </div>
     <!-- Custom Script -->
     <script src="js/newWorkout.js" type="text/javascript"></script>
-  
+    <script src="js/prevWorkout.js" type="text/javascript"></script>
   </body>
   
   </html>
