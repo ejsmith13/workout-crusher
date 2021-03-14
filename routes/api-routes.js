@@ -99,4 +99,13 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+
+  // DELETE route for deleting posts
+  app.delete("/api/posts/:id", (req, res) => {
+    db.Exercise.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(dbPost => res.json(dbPost));
+  });
 };
