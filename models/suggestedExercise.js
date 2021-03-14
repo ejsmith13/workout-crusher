@@ -1,24 +1,31 @@
 const chalk = require("chalk");
 const seeds = [
   {
-    exercise: "walking",
-    description: "walking",
+    exercise: "Walking",
+    description: "Walk at a brisk pace for 45 min to 1 hr",
     photoURL:
-      "https://media.istockphoto.com/photos/mid-aged-woman-running-in-city-park-picture-id1094475872",
+      "https://global-uploads.webflow.com/5ca5fe687e34be0992df1fbe/5dafe4081c03a70f3d7a60d7_fitwalk2.jpeg",
     category: "Cardio"
   },
   {
-    exercise: "running",
-    description: "running",
+    exercise: "Running",
+    description: "Jog for 20-30 minutes at a moderate pace",
     photoURL:
       "https://www.sciencemag.org/sites/default/files/styles/article_main_image_-_1280w__no_aspect_/public/1036780592-1280x720.jpg?itok=wNUKvmCd",
     category: "Cardio"
   },
   {
-    exercise: "pull ups",
-    description: "pull yourself up",
+    exercise: "Pull Ups",
+    description: "Complete 3 sets of 5 pull ups to target your lats and biceps",
     photoURL:
       "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mh0418-fit-pul-01-1558554157.jpg?crop=0.750xw:1.00xh;0.250xw,0&resize=980:*",
+    category: "Resistance"
+  },
+  {
+    exercise: "Sit Ups",
+    description: "Complete three sets of 8 sit up to gain abdominal strenght.",
+    photoURL:
+      "https://media.gq.com/photos/580a26d7aafbc05a239a57f7/master/w_1600%2Cc_limit/sit-up-butt.jpg",
     category: "Resistance"
   }
 ];
@@ -41,6 +48,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     }
+  });
+  Daily.destroy({
+    where: {},
+    truncate: true
   });
   Daily.sync();
   Daily.findAll().then(results => {
