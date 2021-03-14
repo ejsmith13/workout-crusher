@@ -1,3 +1,4 @@
+const chalk = require("chalk");
 const seeds = [
   {
     exercise: "walking",
@@ -44,7 +45,14 @@ module.exports = function(sequelize, DataTypes) {
   Daily.sync();
   Daily.findAll().then(results => {
     if (results.length === 0) {
-      seeds.map(seed => Daily.create(seed));
+      console.log(chalk.red.bgCyan.bold("Creating seeds"));
+      // eslint-disable-next-line array-callback-return
+      seeds.map(seed => {
+        Daily.create(seed);
+        console.log(chalk.cyan(`Load: ${seed.exercise}`));
+      });
+    } else {
+      console.log(chalk.bgRed("Using existing seeds"));
     }
   });
 

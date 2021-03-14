@@ -3,14 +3,14 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-#card1{
+/* #card1{
     width: 20rem; 
     margin: 10% auto; 
     text-align: center;
     background-color: teal;
     color:white;
     padding: 2rem;
-}
+} */
 #card2{
     text-align: center;
     margin: auto;
@@ -45,11 +45,11 @@ body{
 #navLinks{
     text-align: right;
 }
-#newBtn{
+/* #newBtn{
     background-color: rgb(42, 123, 216);
     color: white;
     margin-top: 2%;
-}
+} */
 #cardHeader{
     border-bottom: white solid 3px;
     color: white;
@@ -60,8 +60,8 @@ body{
     font-weight: bold;
     margin-top: 5px;
 }
-#updateBtn{
+/* #updateBtn{
     background-color: rosybrown;
     color: white;
-}
+} */
 
