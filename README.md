@@ -1,1 +1,1 @@
-# workout-crusher
+# Workout Crusher

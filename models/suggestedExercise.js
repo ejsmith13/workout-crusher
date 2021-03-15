@@ -23,9 +23,52 @@ const seeds = [
   },
   {
     exercise: "Sit Ups",
-    description: "Complete three sets of 8 sit up to gain abdominal strenght.",
+    description: "Complete three sets of 8 sit up to gain abdominal strength.",
     photoURL:
       "https://media.gq.com/photos/580a26d7aafbc05a239a57f7/master/w_1600%2Cc_limit/sit-up-butt.jpg",
+    category: "Resistance"
+  },
+  {
+    exercise: "Push Ups",
+    description: "Complete 3 sets of 10 sit up to work out your triceps.",
+    photoURL:
+      "https://assets.gqindia.com/photos/5cee7eb00379a73d25177759/master/pass/Pushup.jpg",
+    category: "Resistance"
+  },
+  {
+    exercise: "Lunges",
+    description:
+      "Complete 3 sets of 5 lunges on each leg for a lower body workout.",
+    photoURL:
+      "https://images.ctfassets.net/90pc6zknij8o/wNmQUKQQSkuOb4nOuHTZ6/f925977a47b6c222e9be1209135bcfbb/how-to-do-lunges.jpg?w=1200&h=630&fl=progressive&q=50&fit=fill&f=faces",
+    category: "Resistance"
+  },
+  {
+    exercise: "Squats",
+    description: "Complete 3 sets of 12-15 squats to get a great leg workout.",
+    photoURL:
+      "https://homegymbuild.com/wp-content/uploads/2019/07/simple-exercise-ball-squat.jpg",
+    category: "Resistance"
+  },
+  {
+    exercise: "Crescent Lunge",
+    description: "Hold for 5 breaths on each leg to help stretch your legs.",
+    photoURL:
+      "https://media.self.com/photos/5b7c4e6d3327c070925be48d/master/w_1600%2Cc_limit/crescent-lunge-beginner-yoga.jpg",
+    category: "Yoga"
+  },
+  {
+    exercise: "Plank",
+    description: "Complete 3 sets of holding for 30 seconds.",
+    photoURL:
+      "https://www.silversneakers.com/wp-content/uploads/2019/08/SSBlog_PlankVariation_700x525.jpg",
+    category: "Resistance"
+  },
+  {
+    exercise: "Bridge",
+    description: "Complete 3 sets of 10 sit up to gain abdominal strenghth.",
+    photoURL:
+      "https://post.healthline.com/wp-content/uploads/sites/2/2020/06/GRT_Bridge_Pose_Yoga-1200x628-Facebook-1200x628.jpg",
     category: "Resistance"
   }
 ];

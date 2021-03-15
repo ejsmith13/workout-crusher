@@ -3,7 +3,7 @@ const image = document.getElementById("card2Img");
 const text = document.getElementById("text");
 const category = document.getElementById("category");
 const crushBtn = document.getElementById("crushBtn");
-const id = Math.floor(Math.random() * 3) + 1;
+const id = Math.floor(Math.random() * 10) + 1;
 
 // eslint-disable-next-line no-unused-vars
 let posts;
