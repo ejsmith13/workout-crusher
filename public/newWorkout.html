@@ -13,29 +13,30 @@
 
 <body>
     <!-- Navbar like other pages -->
-    <nav class="navbar " id="nav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/logout">
-            Logout
-          </a>
-          <ul class="nav" id="navLinks">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/logWorkout">Exercise Log</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/logout">Sign Out</a>
-            </li>
-          </ul>
-        </div>
+    <nav class="navbar sticky-top" id="nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home" id="logo">Crush-It</a>
+        <ul class="nav" id="navLinks">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/newWorkout">Start New Workout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logWorkout">Exercise Log</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Sign Out</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Previous Workouts to allow user to see them and update as needed -->
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6" id= "leftColumn">
           <form id="previous">
             <div class="form-group">
               <label for="prevCategory">Previous Exercises:</label><br />
@@ -51,7 +52,7 @@
           </div>
         </div>
         <!-- Form for posting new workouts to the database -->
-        <div class="col-md-6">
+        <div class="col-md-6" id="rightColumn">
           <form id="cms">
             <div class="form-group">
                 <label for="category">Select Category:</label><br />
