@@ -1,20 +1,24 @@
 body{
     background-image: url("https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8d29ya291dHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80") ;
     background-attachment: fixed;
+    background-size: cover;
 }
-#card1{
+/* #card1{
     width: 20rem; 
     margin: 10% auto; 
     text-align: center;
     background-color: teal;
     color:white;
     padding: 2rem;
-}
+} */
 #card2{
     text-align: center;
-    width: fit-content;
     margin: auto;
-    background-color: lightblue;
+    margin-top: 35px;
+    background-color: rgb(42, 46, 46, .7);
+    color: white;
+    border-radius: 25px;
+    
 }
 #card2Img{
     height: 400px;
@@ -22,13 +26,19 @@ body{
 #crushBtn{
     background-color: rgb(42, 123, 216);
     color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 #nav{
+    margin-top: 3px;
     background-color: lightcoral;
+    border-radius: 15px;
     font-size: larger;
     font-weight: bolder;
     color: purple;
+   
 }
 #logo{
     font-size: xx-large;
@@ -36,22 +46,23 @@ body{
 #navLinks{
     text-align: right;
 }
-#newBtn{
+/* #newBtn{
     background-color: rgb(42, 123, 216);
     color: white;
     margin-top: 2%;
-}
+} */
 #cardHeader{
-    background-color: gray;
+    border-bottom: white solid 3px;
     color: white;
     font-weight: bold;
-    font-size: large;
+    font-size: xx-large;
 }
 #title{
     font-weight: bold;
+    margin-top: 5px;
 }
-#updateBtn{
+/* #updateBtn{
     background-color: rosybrown;
     color: white;
-}
+} */
 
