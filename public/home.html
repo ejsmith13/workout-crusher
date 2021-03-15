@@ -11,52 +11,53 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    
-    
-    
+
     <title>Landing Page</title>
   </head>
   <body>
-    <nav class="navbar " id="nav">
+    <nav class="navbar sticky-top" id="nav">
       <div class="container-fluid">
         <a class="navbar-brand" href="#" id="logo">Crush-It</a>
         <ul class="nav" id="navLinks">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/logWorkout">Exercise Log</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/logout">Sign Out</a>
-            </li>
-          </ul>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/newWorkout">Start New Workout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logWorkout">Exercise Log</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Sign Out</a>
+          </li>
+        </ul>
       </div>
     </nav>
 
-    <div class="card" id="card1">
+    <!-- <div class="card" id="card1">
       <div class="card-body">
         <h5 class="card-title">Track todays exercise</h5>
         <h6 class="card-subtitle mb-2 text-muted"></h6>
         <a href="./newWorkout.html" class="btn " id="newBtn">Start new</a>
       </div>
-    </div>
+    </div> -->
 
-    <div class="card" id="card2">
-      <div class="card-header"id="cardHeader">
-        Featured Daily Exercise
-      </div>
-      <div class="card-body">
-        <h5 class="card-title" id="title" ></h5>
-        <img
-            id="card2Img"
-          src=""
-          alt=""
-        />
-        <p class="card-text" id="text">
-         
-        </p>
-        <a href="#" class="btn" id="crushBtn">Crush It!</a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8" id="card2">
+          <div class="card-header" id="cardHeader">
+            Featured Exercise
+          </div>
+          <div class="body">
+            <h5 class="title" id="title"></h5>
+            <p id="category"></p>
+            <p class="card-text" id="text"></p>
+            <img id="card2Img" src="" alt="" />
+            <br>
+            <a href="#" class="btn" id="crushBtn">Crush It!</a>
+          </div>
+        </div>
       </div>
     </div>
   </body>
