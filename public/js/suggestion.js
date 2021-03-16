@@ -32,7 +32,7 @@ const displayDaily = data => {
   title.innerHTML = `${data.exercise}`;
   image.setAttribute("src", `${data.photoURL}`);
   text.innerHTML = `${data.description}`;
-  category.innerHTML = `Category: ${data.category}`;
+  category.innerHTML = `${data.category}`;
 };
 
 const crushIt = () => {

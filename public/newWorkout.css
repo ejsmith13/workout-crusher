@@ -18,6 +18,9 @@ body{
 /* Page features  */
 button.submit {
     float: right;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-color:rgb(42, 123, 216);
   }
 
 form#previous {
