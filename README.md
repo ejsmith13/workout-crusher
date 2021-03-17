@@ -35,7 +35,7 @@
 
   ## Screenshots:
 
-
+ ![Home Page](./public/home_page.png)
   
 
   
@@ -63,6 +63,7 @@
 
 
   Please feel free to use this project.
+  ![Gif demo of Workout-Crusher](./public/workout_crusher.gif)
 
 
   
