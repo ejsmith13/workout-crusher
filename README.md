@@ -27,7 +27,7 @@
   ## Description:
 
 
-  Crush-it is a full stack web application that allows the user to dynamically track their daily workouts. It provides a secure and personalized log for each individual and allows them to enter new workouts as well as edit previous routines. The application provides exercise suggestions to keep users' routines fresh and intersting. After a suggested exercise is completed, users can hit the "Crush-it" button to automatically log the exercise in their personal tracker. Our application is live and ready for you to test out, so go ahead and [CRUSH-IT](https://shielded-ravine-84088.herokuapp.com/)
+  Workout Crusher is a full stack web application that allows the user to dynamically track their daily workouts. It provides a secure and personalized log for each individual and allows them to enter new workouts as well as edit previous sessions. The application provides exercise suggestions to keep users' routines fresh and intersting. After a suggested exercise is completed, users can hit the "Crush-it" button to automatically log the exercise in their personal tracker. Our application is live and ready for you to test out, so go ahead and [CRUSH-IT](https://shielded-ravine-84088.herokuapp.com/)
 
 
   
@@ -36,7 +36,14 @@
   ## Screenshots:
 
 
-  
+
+![About Page](/public/assets/images/screenshot_about.png)
+
+![Home Page](/public/assets/images/screenshot_home.png)
+
+![New Workout Page](/public/assets/images/screenshot_new.png) 
+
+![Log Page](/public/assets/images/screenshot_log.png)
 
   
 --------------------------------------
