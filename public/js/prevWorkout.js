@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", e => {
 
   // Function to make DELETE request for a post
   const deletePost = id => {
+    console.log("deleting post");
     fetch(`/api/posts/${id}`, {
       method: "DELETE",
       headers: {
@@ -109,8 +110,8 @@ document.addEventListener("DOMContentLoaded", e => {
     newPostDate.textContent = formattedDate;
 
     newPostCardHeading.appendChild(newPostDate);
-    // newPostCardHeading.appendChild(deleteBtn);
-    newPostCardHeading.appendChild(editBtn);
+    newPostCardHeading.appendChild(deleteBtn);
+    // newPostCardHeading.appendChild(editBtn);
     newPostCardHeading.appendChild(newPostTitle);
     // newPostCardHeading.appendChild(newPostCategory);
     newPostCardBody.appendChild(newPostBody);

@@ -46,6 +46,8 @@
 ![Log Page](/public/assets/images/screenshot_log.png)
 
   
+
+  
 --------------------------------------
 
   ## Installation
@@ -70,6 +72,7 @@
 
 
   Please feel free to use this project.
+  ![Gif demo of Workout-Crusher](./public/workout_crusher.gif)
 
 
   

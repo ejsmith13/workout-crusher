@@ -1,4 +1,9 @@
 
+body{
+  background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80") ;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 /* Navbar */
 .navbar {
@@ -6,11 +11,16 @@
   font-size: larger;
   font-weight: bolder;
   color: blue;
+  margin-top: 3px;
+  border-radius: 15px;
 }
 
 /* Page features  */
 button.submit {
     float: right;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background-color:rgb(42, 123, 216);
   }
 
 form#previous {
@@ -29,4 +39,32 @@ form#cms {
 button.edit {
   float: right;
   margin: 5px;
+}
+
+#leftColumn{
+  border:lightcoral solid 1px;
+  width: 30%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: auto;
+  background-color: rgb(42, 46, 46, .7);
+  border-radius: 25px;
+  color: white;
+}
+
+#rightColumn{
+  border: lightcoral solid 1px;
+  margin: auto;
+  background-color: rgb(42, 46, 46, .7);
+  border-radius: 25px;
+  color: white;
+  margin-top: 10px;
+}
+#logo{
+  font-size: xx-large;
+}
+
+div.card{
+  color: black;
+  width: 300px;
 }
