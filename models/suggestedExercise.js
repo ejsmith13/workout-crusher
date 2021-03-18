@@ -72,6 +72,7 @@ const seeds = [
     category: "Resistance"
   }
 ];
+
 module.exports = function(sequelize, DataTypes) {
   const Daily = sequelize.define("Daily", {
     exercise: {
@@ -106,6 +107,7 @@ module.exports = function(sequelize, DataTypes) {
       console.log(chalk.bgRed("Using existing seeds"));
     }
   });
+  Daily.sync();
 
   return Daily;
 };
