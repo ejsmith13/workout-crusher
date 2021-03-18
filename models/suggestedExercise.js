@@ -92,10 +92,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     }
   });
-  Daily.destroy({
-    where: {},
-    truncate: true
-  });
+
   Daily.sync();
   Daily.findAll().then(results => {
     if (results.length === 0) {
